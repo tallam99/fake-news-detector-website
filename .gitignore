@@ -1,0 +1,8 @@
+# Database Files
+*.sqlite3
+
+# Project Files
+.idea/
+
+# Python Extras
+__pycache__/

@@ -5,7 +5,6 @@
         <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="{% static 'picDBhandler/images/genxcommlogo.png' %}">
         <title>
             {% block title %}
             TITLE_BLOCK_DEFAULT
@@ -16,83 +15,12 @@
         {% endblock %}
     </head>
     <body>
-        <div id="navbar">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <a class="navbar-brand" href="http://genxcomm.com/" target="_blank">
-                <img src="{% static 'picDBhandler/images/genxcommlogo.png' %}" width="40" height="40" alt="genxcomm_logo.png">
-              </a>
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'index' %}">Main Homepage</a>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="diesDropdown" role="button" data-toggle="dropdown">
-                        Dies
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'dies' %}">Dies Homepage</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'picDesigns' %}">PIC Designs</a>
-                        <a class="dropdown-item" href="{% url 'packagingGenerations' %}">Packaging Generations</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="wafersDropdown" role="button" data-toggle="dropdown">
-                        Wafers
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'wafers' %}">Wafers Homepage</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'waveguideVendors' %}">Waveguide Vendors</a>
-                        <a class="dropdown-item" href="{% url 'sourceBatches' %}">Source Batches</a>
-                        <a class="dropdown-item" href="{% url 'processingGenerations' %}">Processing Generations</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item active">
-                      <a class="nav-link" href="/util/master/">Excel Sheet Upload</a>
-                  </li>
-
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/admin">Administrator Tools</a>
-                  </li>
-
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'reportBug' %}">Report a Bug</a>
-                  </li>
-
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'dbBackupView' %}">Database Backup</a>
-                  </li>
-                </ul>
-                <form id="searchForm" class="form-inline" action="{% url 'searchResults' %}" method="get" accept-charset="utf-8">
-                    {% csrf_token %}
-                    <input name="search_box" class="form-control mr-sm-2" type="search" placeholder="Search by Designation">
-                    <button id="search_button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-              </div>
-            </nav>
-        </div>
-
-        <div id="content" style="word-wrap: break-all; padding-bottom: 70px">
+        <div style="background-image: url({% static 'images/background.jpg' %}); background-repeat:no-repeat: background-size:100%">
+        <div id="content" style="word-wrap: break-all">
             {% block content %}
             <p> CONTENT_BLOCK_DEFAULT <p>
             {% endblock %}
         </div>
-
-        <footer class="footer text fixed-bottom">
-            {% block footer_content %}
-            <span class="text-muted">© {% now "Y" %} Copyright: <a href="http://genxcomm.com/" target="_blank">GenXComm, Inc.</a></span>
-            {% endblock %}
-        </footer>
 
         <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
         <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>

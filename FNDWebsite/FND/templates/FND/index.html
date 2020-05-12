@@ -73,19 +73,19 @@ Fake News Detector
     </div>
     <main role="main" class="inner cover" style="padding:5% 20% 10%">
         <div style="outline:3px solid grey; outline-offset:100px">
-            <h1 class="cover-heading">Fake News & Binary Classification</h1>
+            <h1 class="cover-heading">Fake News Binary Classification</h1>
             <p class="lead">
                 We explored many models and found out that fake news authors like to yell a lot.
             </p>
             <ul class="nav nav-tabs nav-justified" roll='tablist' style="text-align:center">
                 <li class="nav-item">
-                    <a class="nav-link active" id="m1-tab" data-toggle="tab" href="#m1" role="tab" aria-controls="m1" aria-selected="true">
+                    <a class="nav-link  active" id="m1-tab" data-toggle="tab" href="#m1" role="tab" aria-controls="m1" aria-selected="true">
                         TFIDF-Trained XGBoost
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="m2-tab" data-toggle="tab" href="#m2" role="tab" aria-controls="m2" aria-selected="false">
-                        Model 2
+                        Numerically-Trained XGBoost
                     </a>
                 </li>
                 <li class="nav-item">
@@ -93,79 +93,20 @@ Fake News Detector
                         Model 3
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="m4-tab" data-toggle="tab" href="#m4" role="tab" aria-controls="m4" aria-selected="false">
-                        Model 4
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="m5-tab" data-toggle="tab" href="#m5" role="tab" aria-controls="m5" aria-selected="false">
-                        Model 5
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="m6-tab" data-toggle="tab" href="#m6" role="tab" aria-controls="m6" aria-selected="false">
-                        Model 6
-                    </a>
-                </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="m1" role="tabpanel" aria-labelledby="m1-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
-
-                    <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
-
-                    <br><br>Aenean in massa eu enim imperdiet faucibus quis ut lacus. Etiam gravida dolor sit amet orci varius lobortis. Etiam varius tempus sodales. Aenean dignissim pulvinar eros, nec interdum nunc placerat eget. Vestibulum mattis, nibh vitae convallis fringilla, arcu lectus maximus leo, sed tincidunt tortor erat varius ipsum. Fusce viverra tellus vel dui pharetra aliquet. Curabitur vitae convallis eros. In vulputate vitae odio sit amet vulputate. Sed eu turpis orci. Nulla ornare enim pretium pretium vehicula. Pellentesque fringilla diam id ipsum egestas, ut dignissim felis finibus. Aenean ac dolor a libero aliquam facilisis. Suspendisse maximus euismod orci.
-
-                    <br><br>Proin maximus mauris metus, a dapibus elit pellentesque eget. Curabitur egestas sagittis libero. Integer ut fringilla mi. Aliquam erat volutpat. Nullam vel lacus finibus, laoreet ligula in, feugiat diam. In sodales hendrerit massa sit amet rhoncus. Curabitur sem mauris, auctor eu nibh sit amet, consectetur tincidunt tortor. Aliquam eget feugiat magna. Morbi fringilla facilisis ligula, et pharetra urna placerat vel. Morbi id libero risus. Quisque eget dictum orci.
-
-                    <br><br>Aenean lacus velit, sodales vel nibh eget, lacinia aliquet libero. Fusce blandit luctus sapien, vitae congue tortor varius eget. Proin in mi pulvinar, volutpat erat volutpat, egestas ligula. Nulla pretium tincidunt justo, ac fermentum sem. Quisque eleifend ultricies enim, non semper felis porttitor vitae. Mauris tincidunt at mi in fermentum. Proin feugiat est velit, ac ultricies sapien varius quis. Etiam at dolor vitae metus elementum iaculis.
+                    This model trains an XGBoost Binary Classifier on extracted TF-IDF data from the concatenated text and title of the article. <br>
+                    It restricts the extracted vocabulary to broader terms that appear more frequently between all documents to keep the model as flexible <br>
+                    as possible while maximizing accuracy.
                 </div>
                 <div class="tab-pane fade" id="m2" role="tabpanel" aria-labelledby="m2-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
-
-                    <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
-
-                    <br><br>Aenean in massa eu enim imperdiet faucibus quis ut lacus. Etiam gravida dolor sit amet orci varius lobortis. Etiam varius tempus sodales. Aenean dignissim pulvinar eros, nec interdum nunc placerat eget. Vestibulum mattis, nibh vitae convallis fringilla, arcu lectus maximus leo, sed tincidunt tortor erat varius ipsum. Fusce viverra tellus vel dui pharetra aliquet. Curabitur vitae convallis eros. In vulputate vitae odio sit amet vulputate. Sed eu turpis orci. Nulla ornare enim pretium pretium vehicula. Pellentesque fringilla diam id ipsum egestas, ut dignissim felis finibus. Aenean ac dolor a libero aliquam facilisis. Suspendisse maximus euismod orci.
-
-                    <br><br>Proin maximus mauris metus, a dapibus elit pellentesque eget. Curabitur egestas sagittis libero. Integer ut fringilla mi. Aliquam erat volutpat. Nullam vel lacus finibus, laoreet ligula in, feugiat diam. In sodales hendrerit massa sit amet rhoncus. Curabitur sem mauris, auctor eu nibh sit amet, consectetur tincidunt tortor. Aliquam eget feugiat magna. Morbi fringilla facilisis ligula, et pharetra urna placerat vel. Morbi id libero risus. Quisque eget dictum orci.
-
-                    <br><br>Aenean lacus velit, sodales vel nibh eget, lacinia aliquet libero. Fusce blandit luctus sapien, vitae congue tortor varius eget. Proin in mi pulvinar, volutpat erat volutpat, egestas ligula. Nulla pretium tincidunt justo, ac fermentum sem. Quisque eleifend ultricies enim, non semper felis porttitor vitae. Mauris tincidunt at mi in fermentum. Proin feugiat est velit, ac ultricies sapien varius quis. Etiam at dolor vitae metus elementum iaculis.
+                    This model trains an XGBoost Binary Classifier on extracted numerical data from the text and title of the article, <br>
+                    such as percent of uppercase words, sentiment scores, and text or title length. Much of this numerical data is collected <br>
+                    is collected from a version of the text that have been both lemmatized and had its stop words removed, <br>
+                    although some features are extracted from the raw text, such as percent of uppercase words.
                 </div>
                 <div class="tab-pane fade" id="m3" role="tabpanel" aria-labelledby="m3-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
-
-                    <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
-
-                    <br><br>Aenean in massa eu enim imperdiet faucibus quis ut lacus. Etiam gravida dolor sit amet orci varius lobortis. Etiam varius tempus sodales. Aenean dignissim pulvinar eros, nec interdum nunc placerat eget. Vestibulum mattis, nibh vitae convallis fringilla, arcu lectus maximus leo, sed tincidunt tortor erat varius ipsum. Fusce viverra tellus vel dui pharetra aliquet. Curabitur vitae convallis eros. In vulputate vitae odio sit amet vulputate. Sed eu turpis orci. Nulla ornare enim pretium pretium vehicula. Pellentesque fringilla diam id ipsum egestas, ut dignissim felis finibus. Aenean ac dolor a libero aliquam facilisis. Suspendisse maximus euismod orci.
-
-                    <br><br>Proin maximus mauris metus, a dapibus elit pellentesque eget. Curabitur egestas sagittis libero. Integer ut fringilla mi. Aliquam erat volutpat. Nullam vel lacus finibus, laoreet ligula in, feugiat diam. In sodales hendrerit massa sit amet rhoncus. Curabitur sem mauris, auctor eu nibh sit amet, consectetur tincidunt tortor. Aliquam eget feugiat magna. Morbi fringilla facilisis ligula, et pharetra urna placerat vel. Morbi id libero risus. Quisque eget dictum orci.
-
-                    <br><br>Aenean lacus velit, sodales vel nibh eget, lacinia aliquet libero. Fusce blandit luctus sapien, vitae congue tortor varius eget. Proin in mi pulvinar, volutpat erat volutpat, egestas ligula. Nulla pretium tincidunt justo, ac fermentum sem. Quisque eleifend ultricies enim, non semper felis porttitor vitae. Mauris tincidunt at mi in fermentum. Proin feugiat est velit, ac ultricies sapien varius quis. Etiam at dolor vitae metus elementum iaculis.
-                </div>
-                <div class="tab-pane fade" id="m4" role="tabpanel" aria-labelledby="m4-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
-
-                    <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
-
-                    <br><br>Aenean in massa eu enim imperdiet faucibus quis ut lacus. Etiam gravida dolor sit amet orci varius lobortis. Etiam varius tempus sodales. Aenean dignissim pulvinar eros, nec interdum nunc placerat eget. Vestibulum mattis, nibh vitae convallis fringilla, arcu lectus maximus leo, sed tincidunt tortor erat varius ipsum. Fusce viverra tellus vel dui pharetra aliquet. Curabitur vitae convallis eros. In vulputate vitae odio sit amet vulputate. Sed eu turpis orci. Nulla ornare enim pretium pretium vehicula. Pellentesque fringilla diam id ipsum egestas, ut dignissim felis finibus. Aenean ac dolor a libero aliquam facilisis. Suspendisse maximus euismod orci.
-
-                    <br><br>Proin maximus mauris metus, a dapibus elit pellentesque eget. Curabitur egestas sagittis libero. Integer ut fringilla mi. Aliquam erat volutpat. Nullam vel lacus finibus, laoreet ligula in, feugiat diam. In sodales hendrerit massa sit amet rhoncus. Curabitur sem mauris, auctor eu nibh sit amet, consectetur tincidunt tortor. Aliquam eget feugiat magna. Morbi fringilla facilisis ligula, et pharetra urna placerat vel. Morbi id libero risus. Quisque eget dictum orci.
-
-                    <br><br>Aenean lacus velit, sodales vel nibh eget, lacinia aliquet libero. Fusce blandit luctus sapien, vitae congue tortor varius eget. Proin in mi pulvinar, volutpat erat volutpat, egestas ligula. Nulla pretium tincidunt justo, ac fermentum sem. Quisque eleifend ultricies enim, non semper felis porttitor vitae. Mauris tincidunt at mi in fermentum. Proin feugiat est velit, ac ultricies sapien varius quis. Etiam at dolor vitae metus elementum iaculis.
-                </div>
-                <div class="tab-pane fade" id="m5" role="tabpanel" aria-labelledby="m5-tab">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
-
-                    <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
-
-                    <br><br>Aenean in massa eu enim imperdiet faucibus quis ut lacus. Etiam gravida dolor sit amet orci varius lobortis. Etiam varius tempus sodales. Aenean dignissim pulvinar eros, nec interdum nunc placerat eget. Vestibulum mattis, nibh vitae convallis fringilla, arcu lectus maximus leo, sed tincidunt tortor erat varius ipsum. Fusce viverra tellus vel dui pharetra aliquet. Curabitur vitae convallis eros. In vulputate vitae odio sit amet vulputate. Sed eu turpis orci. Nulla ornare enim pretium pretium vehicula. Pellentesque fringilla diam id ipsum egestas, ut dignissim felis finibus. Aenean ac dolor a libero aliquam facilisis. Suspendisse maximus euismod orci.
-
-                    <br><br>Proin maximus mauris metus, a dapibus elit pellentesque eget. Curabitur egestas sagittis libero. Integer ut fringilla mi. Aliquam erat volutpat. Nullam vel lacus finibus, laoreet ligula in, feugiat diam. In sodales hendrerit massa sit amet rhoncus. Curabitur sem mauris, auctor eu nibh sit amet, consectetur tincidunt tortor. Aliquam eget feugiat magna. Morbi fringilla facilisis ligula, et pharetra urna placerat vel. Morbi id libero risus. Quisque eget dictum orci.
-
-                    <br><br>Aenean lacus velit, sodales vel nibh eget, lacinia aliquet libero. Fusce blandit luctus sapien, vitae congue tortor varius eget. Proin in mi pulvinar, volutpat erat volutpat, egestas ligula. Nulla pretium tincidunt justo, ac fermentum sem. Quisque eleifend ultricies enim, non semper felis porttitor vitae. Mauris tincidunt at mi in fermentum. Proin feugiat est velit, ac ultricies sapien varius quis. Etiam at dolor vitae metus elementum iaculis.
-                </div>
-                <div class="tab-pane fade" id="m6" role="tabpanel" aria-labelledby="m6-tab">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi fringilla, sodales quam quis, pretium magna. Phasellus pharetra hendrerit sapien. Cras iaculis eu ipsum vitae fermentum. Maecenas laoreet ipsum eget tellus commodo, vel tristique eros venenatis. Sed arcu purus, consectetur id lacus id, pretium aliquam neque. Etiam sit amet euismod purus, vitae interdum tortor. Donec egestas eget orci non varius. Nunc dapibus condimentum venenatis. Integer sit amet gravida ante, lacinia molestie arcu.
 
                     <br><br>Cras metus nulla, aliquam vestibulum venenatis nec, congue id odio. Fusce vitae maximus turpis, nec rutrum diam. Suspendisse maximus lacus bibendum interdum ullamcorper. Aliquam tempus tortor et dictum sodales. Duis blandit lacus eu urna rhoncus, id vestibulum purus condimentum. Sed condimentum et tortor mollis ultrices. Ut nec quam in diam porta fermentum. Integer est augue, efficitur sit amet nisi et, facilisis congue dolor. Donec aliquam est eget posuere feugiat. Curabitur accumsan consequat nisi, vitae tristique quam consequat sit amet. Sed pretium nunc id aliquet convallis.
@@ -194,12 +135,9 @@ Fake News Detector
         <div class="form-group">
             <label for="model-select">Example select</label>
             <select class="form-control" id="model-select" name="mymodel-select">
-                <option selected="selected" value="model1">Model 1</option>
-                <option value="model2">Model 2</option>
+                <option selected="selected" value="model1">TFIDF-Trained XGBoost</option>
+                <option value="model2">Numerically-Trained XGBoost</option>
                 <option value="model3">Model 3</option>
-                <option value="model4">Model 4</option>
-                <option value="model5">Model 5</option>
-                <option value="model6">Model 6</option>
             </select>
         </div>
         <input class="btn btn-primary" type="submit" value="Submit">

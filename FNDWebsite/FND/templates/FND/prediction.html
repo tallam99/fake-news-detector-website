@@ -1,0 +1,23 @@
+{% extends 'FND/base.html' %}
+
+{% block title %}
+Bing Bong
+{% endblock %}
+
+{% block content %}
+<div class="text-center cover-container d-flex h-100 p-3 mx-auto flex-column" style="color:white">
+    <header class="masthead mb-auto">
+        <div class="inner" style="fill">
+            <h1 class="masthead-brand">{{ model }}'s Prediction</h1>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br>
+    <main role="main" class="inner cover" style="padding:5% 20% 10%">
+        <h1 class="cover-heading">There is a {{ proba }}% chance the article is innacurate.</h1>
+        <a class="lead">
+            <a href={% url 'index' %}>Return to main site</a>
+        </p>
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br>
+</div>
+{% endblock %}
